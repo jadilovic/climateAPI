@@ -10,7 +10,9 @@ const app = express();
 
 app.get('/', (req, res) => {
 	console.log('path one');
-	res.json('Hello');
+	res.json(
+		'/news - get articles, /news/thetimes - get times articles, /news/theguardian - get guardian articles, /news/telegraph - get telegraph articles'
+	);
 });
 
 const newspapers = [
