@@ -1,12 +1,12 @@
 const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
-const cors = require('cors');
+// const cors = require('cors');
 const { response } = require('express');
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
 app.get('/', (req, res) => {
 	console.log('path one');
