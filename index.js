@@ -2,11 +2,42 @@ const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 // const cors = require('cors');
-const { response } = require('express');
 
 const app = express();
 
 // app.use(cors());
+// testing
+const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'k', 'l', 't'];
+console.log(arr.slice(2, 4));
+console.log(arr);
+// console.log(arr.splice(2, 4));
+// console.log(arr);
+// console.log(arr.splice(4));
+// console.log(arr);
+// console.log(arr.splice(3, 0, 9, 9));
+// console.log(arr);
+
+const greet = () => {
+	const prefix = 'Mr.';
+	return (name) => {
+		console.log(`Hello ${prefix} ${name}`);
+	};
+};
+
+// console.log(greet()('Aki'));
+console.log(this);
+
+function myFun() {
+	console.log(this);
+}
+
+const obj = {
+	bol: true,
+	myFun: myFun,
+};
+
+obj.myFun();
+myFun();
 
 app.get('/', (req, res) => {
 	console.log('path one');
