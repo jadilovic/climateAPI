@@ -36,8 +36,24 @@ const obj = {
 	myFun: myFun,
 };
 
-obj.myFun();
-myFun();
+// obj.myFun();
+// myFun();
+
+// const timer = setInterval(() => {
+// 	console.log('Two seconds have passed!');
+// 	clearItNow();
+// }, 2000);
+
+const clearItNow = () => {
+	clearInterval(timer);
+};
+
+for (let i = 1; i <= 5; i++) {
+	console.log(i);
+	setTimeout(function () {
+		console.log(i);
+	}, i * 1000);
+}
 
 app.get('/', (req, res) => {
 	console.log('path one');
